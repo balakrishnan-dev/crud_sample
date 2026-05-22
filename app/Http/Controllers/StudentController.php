@@ -9,6 +9,7 @@ class StudentController extends Controller
 {
     public function index(){
         $students = Student::all();
+        $bala = null;
         return view('students.index')->with('students',$students);
     }
 
