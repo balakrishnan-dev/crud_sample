@@ -18,7 +18,7 @@ class StudentController extends Controller
 
     public function store(Request $request){
         $resumeName = Null;
-
+        $bala = null;
         if($request->hasFile('resume')){
             $resumeName = time().'.'.$request->resume->extension();
             $request->resume->move(public_path('resume'),$resumeName);
